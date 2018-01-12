@@ -31,6 +31,7 @@ def classify(sample, parameter):
             x = sample[ky2]
             px = gaussian(x,mu,sig)
             p *= px
+        #p *= parameter[ky1]["prior"]
         prb += [p]
     if keys[prb.index(max(prb))] == correct_label:
         return 1

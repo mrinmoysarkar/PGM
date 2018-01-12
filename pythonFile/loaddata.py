@@ -57,8 +57,9 @@ if __name__ == "__main__":
         for i in range(n):
             train_data_df = pd.concat([train_data_df,pd.DataFrame({attitude_feature[i]:attitude_df[attitude_feature[i]]})],axis = 1)    
     
-    
         imu_feature = ["xacc", "yacc", "zacc"]
+        #imu_feature = ["xacc", "yacc", "zacc", "xgyro", "ygyro", "zgyro"]
+        #imu_feature = ["xgyro", "ygyro", "zgyro"]
         n = len(imu_feature)
         for i in range(n):
             train_data_df = pd.concat([train_data_df,pd.DataFrame({imu_feature[i]:imu_df[imu_feature[i]]})],axis = 1)
