@@ -10,7 +10,8 @@ import pandas as pd
 
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
+def train():
     train_data_df = pd.read_json('train.json')
     train_data_df = train_data_df.dropna()
     label_df = pd.read_json('label.json')

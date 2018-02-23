@@ -40,10 +40,12 @@ def classify(sample, parameter):
     
             
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
+def test():
     l=1
     l1 = list(np.linspace(1,7,7,dtype=np.int)) + list(np.linspace(10,22,13,dtype = np.int))
     ll = len(l1)
+    output = np.zeros(ll)
     for l in range(ll):
         file_name = 'train' + str(l1[l]) + '.json'
         train_data_df = pd.read_json(file_name)
@@ -61,3 +63,5 @@ if __name__ == '__main__':
         #print(n,correct)
         correct_percent = round(correct*100/n,2)
         print('test Data '+ str(l1[l]) + ': '+ str(correct_percent)+'%')
+        output[l] = correct_percent
+    return output

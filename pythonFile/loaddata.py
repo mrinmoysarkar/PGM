@@ -19,8 +19,8 @@ def load_data(file_path,table_name):
     return df
 
 
-if __name__ == "__main__":
-        
+#if __name__ == "__main__":
+def loadData():       
     l1 = list(np.linspace(1,7,7,dtype=np.int)) + list(np.linspace(10,22,13,dtype = np.int))
     ll = len(l1)
     for l in range(ll):
